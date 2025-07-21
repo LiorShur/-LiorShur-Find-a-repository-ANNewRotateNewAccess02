@@ -1558,12 +1558,11 @@ for (const entry of enriched) {
       border: 1px solid #ccc;
     } 
     #chart { 
-      height: 300px !important;
-      width: 100% !important;
-      max-height: 300px !important;
-      display: block !important;
-      background: white;
-      border: 1px solid #ccc;
+      height: 300px;
+  width: 100%;
+  max-height: 300px;
+  background: white;
+  border: 1px solid #ccc;
     } 
       #chart-tab canvas {
   height: 300px !important;
@@ -1611,7 +1610,7 @@ for (const entry of enriched) {
     <p>תוכן מפה כאן</p>
   </div>
   <div id="chart" class="tab-content">
-    <canvas id="chart"></canvas>
+    <canvas id="chart-canvas"></canvas>
     <div class="legend">
           <b>מקרא שיפועים:</b><br />
           <span style="color:green">🟩 ≤ 6% (קל)</span>
@@ -1861,7 +1860,7 @@ function renderElevationChart() {
 
   
 
-  const chartElement = document.querySelector("#chart canvas");
+  const chartElement = document.querySelector("chart-canvas");
   if (!chartElement) {
     console.error('Chart canvas not found!');
     return;
