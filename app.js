@@ -1860,7 +1860,7 @@ function renderElevationChart() {
 
   
 
-  const chartElement = document.querySelector("chart-canvas");
+  const chartElement = document.getElementById("chart-canvas");
   if (!chartElement) {
     console.error('Chart canvas not found!');
     return;
